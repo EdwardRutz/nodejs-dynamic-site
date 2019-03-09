@@ -1,8 +1,7 @@
-"use strict";
 //Handle HTTP route GET / and POST / i.e. Home
-function homeRoute(request, response) {
+function home(request, response) {
   //if url == "/" && GET
-  if (request.url == "/") {
+  if (request.url === "/") {
     //show search
     response.writeHead(200, {'Content-Type': 'text/plain'});
     response.write("Header\n");
@@ -14,7 +13,7 @@ function homeRoute(request, response) {
 }
 
 //Handle HTTP route GET /:username i.e. /bobSmith
-function userRoute(request, response) {
+function user(request, response) {
   //if url == "/...."
   var userName = request.url.replace("/", "");
   if (userName.length > 0) {
@@ -31,9 +30,8 @@ function userRoute(request, response) {
 }
 
 
-
-module.exports = homeRoute();
-module.exports = userRoute();
+module.exports.home = home;
+module.exports.user = user;
 
 
 

@@ -1,12 +1,12 @@
-"use strict";
-var router = require("router.js");
+var router = require("./router.js");
 
 //Use Node.js to perform the profile look ups and serve a template via HTTP.
 
 //Create a web server
 var http = require('http');
 http.createServer(function (request, response) {
-  homeRoute(request, response);
+  router.home(request, response);
+  router.user(request, response);
 }).listen(3000);
 console.log('Server running at http://<workspace-url>/');
 
