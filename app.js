@@ -4,10 +4,10 @@
 var http = require('http');
 http.createServer(function (request, response) {
   response.writeHead(200, {'Content-Type': 'text/plain'});
-  // setInterval(function() {
-  //   response.write(new Date() + "\n");
-  // }, 1000);
-  response.end('Hello World\n');
+  setInterval(function() {
+    response.write(new Date() + "\n");
+  }, 1000);   //takes about 15 sec to appear since it waits for the page to finish loading
+  // response.end('Hello World');  //ends the response, nothing will come after this .end line.
 }).listen(3000);
 console.log('Server running at http://<workspace-url>/');
 
