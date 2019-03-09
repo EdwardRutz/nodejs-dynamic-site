@@ -15,6 +15,7 @@
 - module.exports
 - response.write
 - request.url
+- response.write
 
 ## Sources
 
