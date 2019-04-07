@@ -1,11 +1,14 @@
 var Profile = require("./profile.js");
 
+//Friendly message for home route
 //Handle HTTP route GET / and POST / i.e. Home
 function home(request, response) {
   //if url == "/" && GET
   if (request.url === "/") {
     //show search
     response.writeHead(200, {'Content-Type': 'text/plain'});
+    response.write("Treehouse User Badge API\n");
+    response.write("http://localhost:3000/treehouse_username\n");
     response.write("Header\n");
     response.write("Search\n");
     response.end("Footer\n");
@@ -14,6 +17,7 @@ function home(request, response) {
   //redirect to /:username
 }
 
+//Route to get user info
 //Handle HTTP route GET /:username i.e. /bobSmith
 function user(request, response) {
   //if url == "/...."

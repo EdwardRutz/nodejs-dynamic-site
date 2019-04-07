@@ -1,8 +1,26 @@
 # A Node.js Dynamic Site
 
->A Node.js site which pulls and displays user profile data.
+>A Node.js site which gets user profile data and displays it.
+>- Created an HTTP server which responds to two different routes and gets user data
 
-# Node.js APIs Used
+
+## Dependencies
+
+- Node.js
+- Mocha
+- Chai
+
+## Set-up
+
+- Clone library
+- Install dependencies, `npm install`
+- Run tests to confirm installation, `npm test`
+- start server, 
+- Go to http://localhost:3000/<treehouse username>
+
+
+
+## Node.js APIs Used
 
 - http.createServer
 - response.writeHead

@@ -9,9 +9,7 @@ var util = require("util");
  * @constructor
  */
 function Profile(username) {
-
     EventEmitter.call(this);
-
     profileEmitter = this;
 
     //Connect to the API URL (https://teamtreehouse.com/username.json)
